@@ -36,3 +36,7 @@ proyectos:
     rol: "Analista de Sistemas y Desarrollador (Proyecto Académico)"
     descripcion: "Diseño y especificación arquitectónica de un sistema web para el control de asistencia. El proyecto abarcó desde el modelado de procesos de negocio (BPMN) y formulación del problema (5W1H), hasta la elaboración de requisitos, casos de uso y diseño de wireframes basados en roles utilizando Excalidraw. Se definieron drivers arquitectónicos y decisiones de diseño documentadas mediante ADRs."
     tecnologias: "Java, Spring Boot, Vue.js, MySQL"
+
+contacto:
+  portafolio: "https://brk-off.github.io"
+  github: "https://github.com/brk-off"
