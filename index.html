@@ -1,0 +1,77 @@
+---
+layout: default
+---
+
+<header class="header">
+    <h1>{{ site.data.portfolio.personal.nombre }}</h1>
+    <h2>{{ site.data.portfolio.personal.rol }}</h2>
+    <p class="location">📍 {{ site.data.portfolio.personal.ubicacion }}</p>
+</header>
+
+<section class="section">
+    <h3>Sobre mí</h3>
+    <p>{{ site.data.portfolio.personal.sobre_mi }}</p>
+</section>
+
+<section class="section">
+    <h3>Educación</h3>
+    <div class="card">
+        <h4>{{ site.data.portfolio.universidad.nombre }}</h4>
+        <p><strong>Carrera:</strong> {{ site.data.portfolio.universidad.carrera }}</p>
+        <p><strong>Estado:</strong> {{ site.data.portfolio.universidad.estado }}</p>
+    </div>
+</section>
+
+<section class="section">
+    <h3>Habilidades Técnicas</h3>
+    <div class="skills-grid">
+        <div class="skill-category">
+            <h4>Backend</h4>
+            <ul>
+                {% for skill in site.data.portfolio.habilidades.backend %}
+                <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="skill-category">
+            <h4>Frontend</h4>
+            <ul>
+                {% for skill in site.data.portfolio.habilidades.frontend %}
+                <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="skill-category">
+            <h4>Arquitectura & Diseño</h4>
+            <ul>
+                {% for skill in site.data.portfolio.habilidades.arquitectura_metodologias %}
+                <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="skill-category">
+            <h4>Herramientas</h4>
+            <ul>
+                {% for skill in site.data.portfolio.habilidades.herramientas %}
+                <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h3>Proyectos Destacados</h3>
+    {% for proyecto in site.data.portfolio.proyectos %}
+    <div class="card">
+        <h4>{{ proyecto.nombre }}</h4>
+        <p class="role">{{ proyecto.rol }}</p>
+        <p>{{ proyecto.descripcion }}</p>
+        <p class="tech"><strong>Tecnologías aplicadas:</strong> {{ proyecto.tecnologias }}</p>
+    </div>
+    {% endfor %}
+</section>
+
+<footer class="footer">
+    <p>© 2026 {{ site.data.portfolio.personal.nombre }}</p>
+</footer>
